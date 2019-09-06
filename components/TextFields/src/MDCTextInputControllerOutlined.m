@@ -30,7 +30,7 @@
 
 static const CGFloat MDCTextInputOutlinedTextFieldFloatingPlaceholderPadding = 8;
 static const CGFloat MDCTextInputOutlinedTextFieldFullPadding = 16;
-static const CGFloat MDCTextInputOutlinedTextFieldNormalPlaceholderPadding = 20;
+static const CGFloat MDCTextInputOutlinedTextFieldNormalPlaceholderPadding = 10;
 static const CGFloat MDCTextInputOutlinedTextFieldThreeQuartersPadding = 12;
 
 static UIRectCorner _roundedCornersDefault = UIRectCornerAllCorners;
@@ -320,7 +320,11 @@ static UIRectCorner _roundedCornersDefault = UIRectCornerAllCorners;
 }
 
 - (CGFloat)borderHeight {
-    return 10;
+  CGFloat scale = UIScreen.mainScreen.scale;
+  CGFloat placeholderEstimatedHeight =
+      MDCCeil(self.textInput.placeholderLabel.font.lineHeight * scale) / scale;
+  return MDCTextInputOutlinedTextFieldNormalPlaceholderPadding + placeholderEstimatedHeight +
+         MDCTextInputOutlinedTextFieldNormalPlaceholderPadding;
 }
 
 @end
