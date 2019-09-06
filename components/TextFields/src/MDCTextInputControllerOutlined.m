@@ -30,8 +30,8 @@
 
 static const CGFloat MDCTextInputOutlinedTextFieldFloatingPlaceholderPadding = 8;
 static const CGFloat MDCTextInputOutlinedTextFieldFullPadding = 16;
-static const CGFloat MDCTextInputOutlinedTextFieldNormalPlaceholderPadding = 10;
-static const CGFloat MDCTextInputOutlinedTextFieldThreeQuartersPadding = 12;
+static const CGFloat MDCTextInputOutlinedTextFieldNormalPlaceholderPadding = 15;
+static const CGFloat MDCTextInputOutlinedTextFieldThreeQuartersPadding = 9.5;
 
 static UIRectCorner _roundedCornersDefault = UIRectCornerAllCorners;
 
