@@ -320,11 +320,7 @@ static UIRectCorner _roundedCornersDefault = UIRectCornerAllCorners;
 }
 
 - (CGFloat)borderHeight {
-  CGFloat scale = UIScreen.mainScreen.scale;
-  CGFloat placeholderEstimatedHeight =
-      MDCCeil(self.textInput.placeholderLabel.font.lineHeight * scale) / scale;
-  return MDCTextInputOutlinedTextFieldNormalPlaceholderPadding + placeholderEstimatedHeight +
-         MDCTextInputOutlinedTextFieldNormalPlaceholderPadding;
+    return 10;
 }
 
 @end

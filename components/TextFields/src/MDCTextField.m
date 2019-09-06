@@ -33,9 +33,9 @@ NSString *const MDCTextInputDidToggleEnabledNotification =
 
 // The image we use for the clear button has a little too much air around it. So we have to shrink
 // by this amount on each side.
-static const CGFloat MDCTextInputClearButtonImageBuiltInPadding = (CGFloat)-100;
-static const CGFloat MDCTextInputEditingRectRightViewPaddingCorrection = -100;
-static const CGFloat MDCTextInputTextRectYCorrection = 100;
+static const CGFloat MDCTextInputClearButtonImageBuiltInPadding = (CGFloat)-2.5;
+static const CGFloat MDCTextInputEditingRectRightViewPaddingCorrection = -2;
+static const CGFloat MDCTextInputTextRectYCorrection = 1;
 
 @interface MDCTextField () {
   UIColor *_cursorColor;
