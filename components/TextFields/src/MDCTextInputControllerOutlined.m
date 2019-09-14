@@ -59,8 +59,12 @@ static UIRectCorner _roundedCornersDefault = UIRectCornerAllCorners;
 - (BOOL)borderxxxxxx {
     return true
 }
-- (BOOL)isFloatingEnabled {
-  return YES;
+- (CGFloat)isFloatingEnabled {
+    CGFloat scale = UIScreen.mainScreen.scale;
+    CGFloat placeholderEstimatedHeight =
+    MDCCeil(self.textInput.placeholderLabel.font.lineHeight * scale) / scale;
+    return MDCTextInputOutlinedTextFieldNormalPlaceholderPadding + placeholderEstimatedHeight +
+    MDCTextInputOutlinedTextFieldNormalPlaceholderPadding;
 }
 - (CGFloat)getBorderHeight {
     CGFloat scale = UIScreen.mainScreen.scale;
