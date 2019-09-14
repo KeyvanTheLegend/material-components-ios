@@ -60,6 +60,14 @@ static UIRectCorner _roundedCornersDefault = UIRectCornerAllCorners;
 - (BOOL)isFloatingEnabled {
   return YES;
 }
+- (CGFloat)getBorderHeight {
+    CGFloat scale = UIScreen.mainScreen.scale;
+    CGFloat placeholderEstimatedHeight =
+    MDCCeil(self.textInput.placeholderLabel.font.lineHeight * scale) / scale;
+    return MDCTextInputOutlinedTextFieldNormalPlaceholderPadding + placeholderEstimatedHeight +
+    MDCTextInputOutlinedTextFieldNormalPlaceholderPadding;
+}
+
 
 - (void)setFloatingEnabled:(__unused BOOL)floatingEnabled {
   // Unused. Floating is always enabled.
