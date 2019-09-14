@@ -43,9 +43,7 @@ static UIRectCorner _roundedCornersDefault = UIRectCornerAllCorners;
 @end
 
 @implementation MDCTextInputControllerOutlined
-- (void) XxxX {
-    print("ad");
-}
+
 - (instancetype)initWithTextInput:(UIView<MDCTextInput> *)input {
   NSAssert(![input conformsToProtocol:@protocol(MDCMultilineTextInput)],
            @"This design is meant for single-line text fields only. For a complementary multi-line "
@@ -58,7 +56,8 @@ static UIRectCorner _roundedCornersDefault = UIRectCornerAllCorners;
 }
 
 #pragma mark - Properties Implementations
-- (BOOL)isFloatingEnabled {
+
+- (BOOL)isFloatingEnabled {s
   return YES;
 }
 - (void)setFloatingEnabled:(__unused BOOL)floatingEnabled {
