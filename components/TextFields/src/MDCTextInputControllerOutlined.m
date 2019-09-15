@@ -61,6 +61,9 @@ static UIRectCorner _roundedCornersDefault = UIRectCornerAllCorners;
 - (BOOL)isFloatingEnabled {
   return YES;
 }
+- (BOOL)isFloatingEnabled23344 {
+    return YES;
+}
 
 - (void)setFloatingEnabled:(__unused BOOL)floatingEnabled {
   // Unused. Floating is always enabled.
@@ -72,6 +75,7 @@ static UIRectCorner _roundedCornersDefault = UIRectCornerAllCorners;
   offset.vertical = textVerticalOffset;
   return offset;
 }
+
 
 + (UIRectCorner)roundedCornersDefault {
   return _roundedCornersDefault;
@@ -327,5 +331,6 @@ static UIRectCorner _roundedCornersDefault = UIRectCornerAllCorners;
   return MDCTextInputOutlinedTextFieldNormalPlaceholderPadding + placeholderEstimatedHeight +
          MDCTextInputOutlinedTextFieldNormalPlaceholderPadding;
 }
+
 
 @end
