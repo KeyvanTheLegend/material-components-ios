@@ -57,7 +57,7 @@ static UIRectCorner _roundedCornersDefault = UIRectCornerAllCorners;
 
 #pragma mark - Properties Implementations
 
-- (BOOL)isFloatingEnabled {s
+- (BOOL)isFloatingEnabled {
   return YES;
 }
 - (void)setFloatingEnabled:(__unused BOOL)floatingEnabled {
