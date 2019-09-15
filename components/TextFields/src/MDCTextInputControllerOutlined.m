@@ -28,10 +28,11 @@
 
 #pragma mark - Class Properties
 
+
 static const CGFloat MDCTextInputOutlinedTextFieldFloatingPlaceholderPadding = 8;
-static const CGFloat MDCTextInputOutlinedTextFieldFullPadding = 16;
-static const CGFloat MDCTextInputOutlinedTextFieldNormalPlaceholderPadding = 20;
-static const CGFloat MDCTextInputOutlinedTextFieldThreeQuartersPadding = 12;
+static const CGFloat MDCTextInputOutlinedTextFieldFullPadding = 14;
+static const CGFloat MDCTextInputOutlinedTextFieldNormalPlaceholderPadding = 15;
+static const CGFloat MDCTextInputOutlinedTextFieldThreeQuartersPadding = 7;
 
 static UIRectCorner _roundedCornersDefault = UIRectCornerAllCorners;
 
