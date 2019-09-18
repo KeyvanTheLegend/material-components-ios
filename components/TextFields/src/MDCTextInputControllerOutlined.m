@@ -31,8 +31,8 @@
 
 static const CGFloat MDCTextInputOutlinedTextFieldFloatingPlaceholderPadding = 8;
 static const CGFloat MDCTextInputOutlinedTextFieldFullPadding = 14;
-static  CGFloat MDCTextInputOutlinedTextFieldNormalPlaceholderPadding = 15;
-static  CGFloat MDCTextInputOutlinedTextFieldThreeQuartersPadding = 7;
+static const CGFloat MDCTextInputOutlinedTextFieldNormalPlaceholderPadding = 15;
+static const CGFloat MDCTextInputOutlinedTextFieldThreeQuartersPadding = 7;
 
 static UIRectCorner _roundedCornersDefault = UIRectCornerAllCorners;
 
@@ -44,21 +44,8 @@ static UIRectCorner _roundedCornersDefault = UIRectCornerAllCorners;
 @end
 
 @implementation MDCTextInputControllerOutlined
-@synthesize name = _name;  //Must do this
 
 //Setter method
-- (void) setName:(NSNumber *)n {
-    NSLog(@"Setting name to: %@", n);
-    
-    _name = n;
-}
-//Getter method
-- (NSNumber*) name {
-    return _name;
-}
-
-- (void) test {
-}
 
 - (instancetype)initWithTextInput:(UIView<MDCTextInput> *)input {
     NSAssert(![input conformsToProtocol:@protocol(MDCMultilineTextInput)],
@@ -78,9 +65,7 @@ static UIRectCorner _roundedCornersDefault = UIRectCornerAllCorners;
 - (BOOL)isFloatingEnabled {
     return YES;
 }
-- (BOOL)isFloatingEnabled23344 {
-    return YES;
-}
+
 
 
 - (void)setFloatingEnabled:(__unused BOOL)floatingEnabled {
@@ -349,8 +334,6 @@ static UIRectCorner _roundedCornersDefault = UIRectCornerAllCorners;
 }
 
 - (CGFloat)borderHeight {
-    int number = [_name integerValue];
-    NSLog(@"Setting name to: %d", number);
     
     CGFloat scale = UIScreen.mainScreen.scale;
     
