@@ -58,7 +58,6 @@
 @interface MDCTextInputControllerOutlined : MDCTextInputControllerBase
 
 - (CGFloat) borderHeight;
-@property (nonatomic) NSNumber* name;
 
 
 @end
