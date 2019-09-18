@@ -44,24 +44,20 @@ static UIRectCorner _roundedCornersDefault = UIRectCornerAllCorners;
 @end
 
 @implementation MDCTextInputControllerOutlined
-@synthesize abas = _abas;
 @synthesize name = _name;  //Must do this
 
 //Setter method
-- (void) setName:(NSString *)n {
+- (void) setName:(NSNumber *)n {
     NSLog(@"Setting name to: %@", n);
     
-    _name = [n uppercaseString];
+    _name = n;
 }
 //Getter method
-- (NSString*) name {
-    NSLog(@"Returning name: %@", _name);
+- (NSNumber*) name {
     return _name;
 }
 
 - (void) test {
-    self.name = @"Joan of arc";
-    NSLog(@"Name is %@", self.name);
 }
 
 - (instancetype)initWithTextInput:(UIView<MDCTextInput> *)input {
@@ -85,9 +81,7 @@ static UIRectCorner _roundedCornersDefault = UIRectCornerAllCorners;
 - (BOOL)isFloatingEnabled23344 {
     return YES;
 }
-- (BOOL)isFloatingEnabled23344 {
-    return YES;
-}
+
 
 - (void)setFloatingEnabled:(__unused BOOL)floatingEnabled {
     // Unused. Floating is always enabled.
