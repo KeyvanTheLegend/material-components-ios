@@ -354,7 +354,7 @@ static UIRectCorner _roundedCornersDefault = UIRectCornerAllCorners;
     MDCTextInputOutlinedTextFieldThreeQuartersPadding - number
     
     return MDCTextInputOutlinedTextFieldNormalPlaceholderPadding + placeholderEstimatedHeight +
-    MDCTextInputOutlinedTextFieldNormalPlaceholderPadding - number;
+    MDCTextInputOutlinedTextFieldNormalPlaceholderPadding ;
 }
 
 
