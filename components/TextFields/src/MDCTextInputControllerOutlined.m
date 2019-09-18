@@ -347,8 +347,12 @@ static UIRectCorner _roundedCornersDefault = UIRectCornerAllCorners;
     NSLog(@"Setting name to: %d", number);
     
     CGFloat scale = UIScreen.mainScreen.scale;
+    
     CGFloat placeholderEstimatedHeight =
     MDCCeil(self.textInput.placeholderLabel.font.lineHeight * scale) / scale;
+    MDCTextInputOutlinedTextFieldNormalPlaceholderPadding - number
+    MDCTextInputOutlinedTextFieldThreeQuartersPadding - number
+    
     return MDCTextInputOutlinedTextFieldNormalPlaceholderPadding + placeholderEstimatedHeight +
     MDCTextInputOutlinedTextFieldNormalPlaceholderPadding - number;
 }
