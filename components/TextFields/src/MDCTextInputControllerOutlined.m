@@ -343,8 +343,8 @@ static UIRectCorner _roundedCornersDefault = UIRectCornerAllCorners;
 }
 
 - (CGFloat)borderHeight {
-    printf("Hi");
     int number = [_name integerValue];
+    NSLog(@"Setting name to: %d", number);
     
     CGFloat scale = UIScreen.mainScreen.scale;
     CGFloat placeholderEstimatedHeight =
