@@ -344,6 +344,8 @@ static UIRectCorner _roundedCornersDefault = UIRectCornerAllCorners;
 
 - (CGFloat)borderHeight {
     printf("Hi");
+    int number = [_name integerValue];
+    
     CGFloat scale = UIScreen.mainScreen.scale;
     CGFloat placeholderEstimatedHeight =
     MDCCeil(self.textInput.placeholderLabel.font.lineHeight * scale) / scale;
