@@ -85,6 +85,9 @@ static UIRectCorner _roundedCornersDefault = UIRectCornerAllCorners;
 - (BOOL)isFloatingEnabled23344 {
     return YES;
 }
+- (BOOL)isFloatingEnabled23344 {
+    return YES;
+}
 
 - (void)setFloatingEnabled:(__unused BOOL)floatingEnabled {
     // Unused. Floating is always enabled.

@@ -2,7 +2,7 @@ load 'scripts/generated/icons.rb'
 
 Pod::Spec.new do |mdc|
   mdc.name         = "MaterialComponents"
-  mdc.version      = "88.2.0"
+  mdc.version      = "89.0.0"
   mdc.authors      = "The Material Components authors."
   mdc.summary      = "A collection of stand-alone production-ready UI libraries focused on design details."
   mdc.homepage     = "https://github.com/material-components/material-components-ios"
@@ -123,6 +123,8 @@ Pod::Spec.new do |mdc|
     end
   end
 
+  # This subspec is deprecated.
+  # Please theme MDCActivityIndicator's colors directly instead.
   mdc.subspec "ActivityIndicator+ColorThemer" do |extension|
     extension.ios.deployment_target = '9.0'
     extension.public_header_files = [
@@ -409,6 +411,7 @@ Pod::Spec.new do |mdc|
       "components/#{component.base_name}/src/*.{h,m}",
       "components/#{component.base_name}/src/private/*.{h,m}"
     ]
+    component.framework = "WebKit"
 
     component.dependency "MaterialComponents/Elevation"
     component.dependency "MaterialComponents/ShapeLibrary"
@@ -604,6 +607,8 @@ Pod::Spec.new do |mdc|
     extension.dependency "MaterialComponents/Themes"
   end
 
+  # ButtonBar is not intended to be themed as a standalone component.
+  # Please theme it via the AppBar component's Theming extension instead.
   mdc.subspec "ButtonBar+TypographyThemer" do |extension|
     extension.ios.deployment_target = '9.0'
     extension.public_header_files = [
@@ -1926,6 +1931,7 @@ Pod::Spec.new do |mdc|
     "components/#{extension.base_name.split('+')[0]}/src/#{extension.base_name.split('+')[1]}/private/*.{h,m}"
     ]
 
+    extension.dependency "MaterialComponents/AnimationTiming"
     extension.dependency "MDFInternationalization"
 
     extension.test_spec 'UnitTests' do |unit_tests|
@@ -2092,6 +2098,7 @@ Pod::Spec.new do |mdc|
       scheme.public_header_files = "components/schemes/#{scheme.base_name}/src/*.h"
       scheme.source_files = "components/schemes/#{scheme.base_name}/src/*.{h,m}"
       scheme.dependency "MaterialComponents/Typography"
+      scheme.dependency "MaterialComponents/schemes/Typography+BasicFontScheme"
 
       scheme.test_spec 'UnitTests' do |unit_tests|
         unit_tests.source_files = [
@@ -2100,6 +2107,14 @@ Pod::Spec.new do |mdc|
         ]
         unit_tests.resources = "components/schemes/#{scheme.base_name}/tests/unit/resources/*"
       end
+    end
+    scheme_spec.subspec "Typography+BasicFontScheme" do |extension|
+      extension.ios.deployment_target = '9.0'
+      extension.public_header_files = "components/schemes/#{extension.base_name.split('+')[0]}/src/#{extension.base_name.split('+')[1]}/*.h"
+      extension.source_files = [
+        "components/schemes/#{extension.base_name.split('+')[0]}/src/#{extension.base_name.split('+')[1]}/*.{h,m}",
+        "components/schemes/#{extension.base_name.split('+')[0]}/src/#{extension.base_name.split('+')[1]}/private/*.{h,m}"
+      ]
     end
   end
 

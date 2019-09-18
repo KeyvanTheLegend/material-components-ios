@@ -56,5 +56,7 @@
  Underline View Mode - While editing
  */
 @interface MDCTextInputControllerOutlined : MDCTextInputControllerBase
+@property (strong, nonatomic) CGFloat *myborderHeight;
+
 
 @end
