@@ -43,6 +43,25 @@ static UIRectCorner _roundedCornersDefault = UIRectCornerAllCorners;
 @end
 
 @implementation MDCTextInputControllerOutlined
+@synthesize abas = _abas;
+@synthesize name = _name;  //Must do this
+
+//Setter method
+- (void) setName:(NSString *)n {
+    NSLog(@"Setting name to: %@", n);
+    
+    _name = [n uppercaseString];
+}
+//Getter method
+- (NSString*) name {
+    NSLog(@"Returning name: %@", _name);
+    return _name;
+}
+
+- (void) test {
+    self.name = @"Joan of arc";
+    NSLog(@"Name is %@", self.name);
+}
 
 - (instancetype)initWithTextInput:(UIView<MDCTextInput> *)input {
   NSAssert(![input conformsToProtocol:@protocol(MDCMultilineTextInput)],
@@ -320,12 +339,12 @@ static UIRectCorner _roundedCornersDefault = UIRectCornerAllCorners;
 }
 
 - (CGFloat)borderHeight {
-  CGFloat scale = UIScreen.mainScreen.scale;
-  CGFloat placeholderEstimatedHeight =
-      MDCCeil(self.textInput.placeholderLabel.font.lineHeight * scale) / scale;
-  return MDCTextInputOutlinedTextFieldNormalPlaceholderPadding + placeholderEstimatedHeight +
-         MDCTextInputOutlinedTextFieldNormalPlaceholderPadding;
-
+    printf("Hi");
+    CGFloat scale = UIScreen.mainScreen.scale;
+    CGFloat placeholderEstimatedHeight =
+    MDCCeil(self.textInput.placeholderLabel.font.lineHeight * scale) / scale;
+    return MDCTextInputOutlinedTextFieldNormalPlaceholderPadding + placeholderEstimatedHeight +
+    MDCTextInputOutlinedTextFieldNormalPlaceholderPadding;
 }
 
 
