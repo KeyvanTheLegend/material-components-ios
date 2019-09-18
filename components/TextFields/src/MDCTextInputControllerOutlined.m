@@ -102,6 +102,12 @@ static UIRectCorner _roundedCornersDefault = UIRectCornerAllCorners;
 + (void)setRoundedCornersDefault:(UIRectCorner)roundedCornersDefault {
     _roundedCornersDefault = roundedCornersDefault;
 }
+- (void) setMDCTextInputOutlinedTextFieldNormalPlaceholderPadding:(CGFloat*) n {
+    MDCTextInputOutlinedTextFieldNormalPlaceholderPadding = *n;
+}
+- (void) setMDCTextInputOutlinedTextFieldThreeQuartersPadding:(CGFloat*) n {
+    MDCTextInputOutlinedTextFieldThreeQuartersPadding = *n;
+}
 
 #pragma mark - MDCTextInputPositioningDelegate
 
@@ -350,8 +356,6 @@ static UIRectCorner _roundedCornersDefault = UIRectCornerAllCorners;
     
     CGFloat placeholderEstimatedHeight =
     MDCCeil(self.textInput.placeholderLabel.font.lineHeight * scale) / scale;
-    MDCTextInputOutlinedTextFieldNormalPlaceholderPadding = MDCTextInputOutlinedTextFieldNormalPlaceholderPadding - number;
-    MDCTextInputOutlinedTextFieldThreeQuartersPadding = MDCTextInputOutlinedTextFieldThreeQuartersPadding - number;
     
     return MDCTextInputOutlinedTextFieldNormalPlaceholderPadding + placeholderEstimatedHeight +
     MDCTextInputOutlinedTextFieldNormalPlaceholderPadding ;
